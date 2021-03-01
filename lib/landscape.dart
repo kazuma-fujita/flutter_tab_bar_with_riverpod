@@ -15,6 +15,6 @@ abstract class Landscape with _$Landscape {
 @freezed
 abstract class LandscapeList with _$LandscapeList {
   const factory LandscapeList({
-    @Default([]) final List<Landscape> landscapes,
+    @Default(<Landscape>[]) final List<Landscape> landscapes,
   }) = _LandscapeList;
 }
