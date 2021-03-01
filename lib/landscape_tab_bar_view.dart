@@ -19,12 +19,12 @@ class LandscapeTabBarView extends StatelessWidget {
         Const.routeNameCreateLandscape: (BuildContext context) =>
             CreateLandscapeView()
       },
-      home: _BuildDefaultTabController(),
+      home: BuildDefaultTabController(),
     );
   }
 }
 
-class _BuildDefaultTabController extends HookWidget {
+class BuildDefaultTabController extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final _landscapes =
@@ -43,6 +43,7 @@ class _BuildDefaultTabController extends HookWidget {
               ),
             ],
             bottom: TabBar(
+              isScrollable: true,
               tabs: _landscapes
                   .map((Landscape landscape) => Tab(text: landscape.name))
                   .toList(),
